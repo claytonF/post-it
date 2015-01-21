@@ -51,6 +51,6 @@ flash.each do |key, value|
 	key		#=> :success
 	value	#=> "whoop"
 end	
-
+   
 ```
 
