@@ -1,0 +1,44 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	width:720px;
+	margin:auto;
+	font-family:courier;
+}
+header {
+	margin:10px 0;
+	padding:10px;
+	border-bottom:3px solid #ccc;
+
+	a {
+	color:red;
+	text-decoration:none;
+	&:hover {
+		color:darken(red, 20%);
+	}
+	}
+}
+#posts {
+	background-color:#f2f2f2;
+	padding:20px;
+
+	.post {
+		background-color:#fff;
+		padding:20px;
+		margin:10px;
+	}
+}
+.success {
+	background-color:green;
+	padding:10px;
+	color:#fff;
+}
+.error {
+	background-color:red;
+	padding:10px;
+	color:#fff;
+	display: block;
+	margin:10px 0;
+}

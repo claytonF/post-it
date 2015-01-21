@@ -1,0 +1,10 @@
+<h1>Create a new post</h1>
+
+
+<!-- need a form for creating a post -->
+<!-- using a helper passing an instance of our post model to the helper which will build a form based on the structure fo the table -->
+<%= simple_form_for @post do |form| %> 
+	<%= form.input :title %>
+	<%= form.input :body %>
+	<%= form.button :submit %>
+<% end %>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PostIt</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+	<nav class="nav">
+		<%= link_to "Home", root_path %> |
+		<%= link_to "New Post", new_post_path %> |
+		<%= mail_to "clayton.fussell@gmail.com", "Contact" %>
+	</nav>
+</header>
+<% flash.each do |key, value| %>
+	
+<p class="<%= key %>"><%= value %></p>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

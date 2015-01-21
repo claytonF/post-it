@@ -1,0 +1,9 @@
+<h1>Edit a post</h1>
+
+<!-- Need a form for updating a post -->
+<%= simple_form_for @post do |f| %>
+	<%= f.input :title %>
+	<%= f.input :body %>
+	<%= f.submit 'save' %>
+<% end %>
+<p><%= button_to "delete", post_path(@post), method: :delete, class: :button %></p> 

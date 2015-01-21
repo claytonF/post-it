@@ -1,0 +1,22 @@
+<h1>My Blog</h1>
+<!-- <p>Find me in app/views/posts/index.html.erb</p> -->
+<!-- @ are instance variables -->
+<%# this is an ERB ruby comment %>
+<%# = sign in ruby tag prints the line %>
+<section id="posts">
+	<% @posts.each do |post| %>
+		<section class="post">
+			<%= link_to post_path(post) do %>	
+				<h2><%= post.title %></h2>
+			<% end %>
+			<p><%= post.body %></p>
+			<small>Post <%= time_ago_in_words post.created_at %> ago</small> | <small>Last updated: <%= post.updated_at %></small>
+			<p><%= link_to "Edit Post", edit_post_path(post) %></p>
+		</section>	
+	<% end %>
+</section>
+<section>
+	<p><%= link_to "New Post", new_post_path %></p>
+</section>
+
+
